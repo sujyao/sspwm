@@ -1,0 +1,29 @@
+module  theta(
+		input clk,
+		output reg theTA);
+		 
+
+	
+	
+	integer counter;
+	integer dut;
+	integer div = 5681; // slow down the clock 
+	integer r = 0;
+	integer delay = 0;
+	integer THETA_TMP_COUNTER = 0;
+	
+	
+	reg  [9:0] THETA = 10'd0;   // 10 bit, up to 1024
+	reg [12:0] SINE_TMP;         //Temporary holder for output (two's compliment)
+	reg [12:0] SINE_OUT;         //Output Sine in two's compliment
+	
+	always @(posedge clk)
+		
+	
+	
+	
+	end 
+	
+	
+
+endmodule
