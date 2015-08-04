@@ -1,6 +1,7 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="test">
-		<CBX_INST_ENTRY INSTANCE_NAME="|test|theta:inst|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_2bm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|test|sine_look_up:inst|altsyncram:WideOr0_rtl_0" CBX_FILE_NAME="altsyncram_02v.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|test|theta:inst4|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_o9m.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

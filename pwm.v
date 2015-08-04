@@ -22,7 +22,8 @@ module  pwm(
 	
 always @(posedge clk) begin
 	if(r == div ) begin
-		THETA = (THETA + 10'b1) % 10'd89; // theta_a is flopped theat 0 to 255  
+		//THETA = (THETA + 10'b1) % 10'd89; // theta_a is flopped theat 0 to 255  
+		THETA = 10'd44;
       r = 1;
 		  
 		//adding delay here 	 

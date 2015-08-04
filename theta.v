@@ -1,6 +1,6 @@
 module  theta(
 		input clk,
-		output  reg  [9:0] theTA);
+		output  reg  [6:0] theTA);
 		 
 
 	
@@ -15,11 +15,11 @@ module  theta(
 	
 	always @(posedge clk) begin
 		if(r == div ) begin
-			theTA = (theTA + 10'b1) % 10'd89; // theta_a is flopped theat 0 to 255  
+			theTA = (theTA + 7'b1) % 7'd89; // theta_a is flopped theat 0 to 255  
 			r = 1;
 		  
 		//adding counter here 	 
-			if(theTA == 10'd0) begin
+			if(theTA == 7'd0) begin
 				theTA_TMP_COUNTER = theTA_TMP_COUNTER + 1; // Theta counter.
 			end
 			else begin
@@ -28,9 +28,25 @@ module  theta(
 		//counter ends.
 		end
 		else begin
+		
+			if(theTA_TMP_COUNTER == 1) begin
+				theTA = 10'd0;
+				if(delay == 500000) begin
+					theTA_TMP_COUNTER = 0;
+					delay = 0;
+				end
+				else begin 
+					delay = delay + 1;		
+				end 		 
+			end	
+		
+		
+		
 			r = r + 1;
 		end
-	
+		
+
+		
 	
 	end 		
 endmodule
