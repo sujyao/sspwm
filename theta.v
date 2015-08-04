@@ -15,8 +15,8 @@ module  theta(
 	
 	always @(posedge clk) begin
 		if(r == div ) begin
-		theTA = (theTA + 10'b1) % 10'd89; // theta_a is flopped theat 0 to 255  
-      r = 1;
+			theTA = (theTA + 10'b1) % 10'd89; // theta_a is flopped theat 0 to 255  
+			r = 1;
 		  
 		//adding counter here 	 
 			if(theTA == 10'd0) begin

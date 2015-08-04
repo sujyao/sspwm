@@ -1,5 +1,6 @@
 module  sspwm(
 		input clk,
+		input [12:0] Sine_out,
 		output reg pwm);
 		 
 
@@ -21,7 +22,7 @@ always @(posedge clk) begin
 		counter = counter + 1;
 		pwm = pwm;
 	end
-	if(counter <= 2500) begin // duty cycle value 
+	if(counter <= Sine_out) begin // duty cycle value 
 		pwm = 1'b1;
 	end
 	else begin 
