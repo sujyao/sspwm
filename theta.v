@@ -1,47 +1,24 @@
 module  theta(
 		input clk,
-		output  reg  [6:0] theTA);
+		output  reg  [7:0] theTA);
 		 
 
 	
 	
-	integer counter;
-	integer dut;
-	integer div = 5681; // slow down the clock 
-	integer r = 0;
-	integer delay = 0;
-	integer theTA_TMP_COUNTER = 0;
 	
+	
+	integer div = 5000; // slow down the clock 
+	integer r = 0;
+	
+
 	
 	always @(posedge clk) begin
 		if(r == div ) begin
-			theTA = (theTA + 7'b1) % 7'd89; // theta_a is flopped theat 0 to 255  
-			r = 1;
-		  
-		//adding counter here 	 
-			if(theTA == 7'd0) begin
-				theTA_TMP_COUNTER = theTA_TMP_COUNTER + 1; // Theta counter.
-			end
-			else begin
-				theTA_TMP_COUNTER = theTA_TMP_COUNTER;
-			end
-		//counter ends.
+			theTA = (theTA + 8'b1) % 9'd256; // theta_a is flopped theat 0 to 255  
+			r = 0;
+	
 		end
 		else begin
-		
-			if(theTA_TMP_COUNTER == 1) begin
-				theTA = 10'd0;
-				if(delay == 500000) begin
-					theTA_TMP_COUNTER = 0;
-					delay = 0;
-				end
-				else begin 
-					delay = delay + 1;		
-				end 		 
-			end	
-		
-		
-		
 			r = r + 1;
 		end
 		

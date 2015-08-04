@@ -54,14 +54,36 @@ applicable agreement for further details.
 	(annotation_block (location)(rect 1352 184 1408 200))
 )
 (symbol
-	(rect 536 152 744 232)
-	(text "sine_look_up" (rect 5 0 68 12)(font "Arial" ))
+	(rect 296 152 456 232)
+	(text "theta" (rect 5 0 29 12)(font "Arial" ))
 	(text "inst" (rect 8 64 25 76)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
-		(text "teth_ta[6..0]" (rect 0 0 60 12)(font "Arial" ))
-		(text "teth_ta[6..0]" (rect 21 27 81 39)(font "Arial" ))
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 27 35 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 160 32)
+		(output)
+		(text "theTA[7..0]" (rect 0 0 54 12)(font "Arial" ))
+		(text "theTA[7..0]" (rect 94 27 148 39)(font "Arial" ))
+		(line (pt 160 32)(pt 144 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 144 64))
+	)
+)
+(symbol
+	(rect 536 152 744 232)
+	(text "sine_look_up" (rect 5 0 68 12)(font "Arial" ))
+	(text "inst5" (rect 8 64 31 76)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "teth_ta[7..0]" (rect 0 0 60 12)(font "Arial" ))
+		(text "teth_ta[7..0]" (rect 21 27 81 39)(font "Arial" ))
 		(line (pt 0 32)(pt 16 32)(line_width 3))
 	)
 	(port
@@ -74,8 +96,8 @@ applicable agreement for further details.
 	(port
 		(pt 208 32)
 		(output)
-		(text "sine_out[12..0]" (rect 0 0 73 12)(font "Arial" ))
-		(text "sine_out[12..0]" (rect 126 27 199 39)(font "Arial" ))
+		(text "sine_out[11..0]" (rect 0 0 73 12)(font "Arial" ))
+		(text "sine_out[11..0]" (rect 126 27 199 39)(font "Arial" ))
 		(line (pt 208 32)(pt 192 32)(line_width 3))
 	)
 	(drawing
@@ -85,7 +107,7 @@ applicable agreement for further details.
 (symbol
 	(rect 904 144 1080 224)
 	(text "sspwm" (rect 5 0 39 12)(font "Arial" ))
-	(text "inst3" (rect 8 64 31 76)(font "Arial" ))
+	(text "inst6" (rect 8 64 31 76)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -96,8 +118,8 @@ applicable agreement for further details.
 	(port
 		(pt 0 48)
 		(input)
-		(text "Sine_out[12..0]" (rect 0 0 74 12)(font "Arial" ))
-		(text "Sine_out[12..0]" (rect 21 43 95 55)(font "Arial" ))
+		(text "Sine_out[11..0]" (rect 0 0 74 12)(font "Arial" ))
+		(text "Sine_out[11..0]" (rect 21 43 95 55)(font "Arial" ))
 		(line (pt 0 48)(pt 16 48)(line_width 3))
 	)
 	(port
@@ -109,28 +131,6 @@ applicable agreement for further details.
 	)
 	(drawing
 		(rectangle (rect 16 16 160 64))
-	)
-)
-(symbol
-	(rect 296 152 456 232)
-	(text "theta" (rect 5 0 29 12)(font "Arial" ))
-	(text "inst4" (rect 8 64 31 76)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "clk" (rect 0 0 14 12)(font "Arial" ))
-		(text "clk" (rect 21 27 35 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 160 32)
-		(output)
-		(text "theTA[6..0]" (rect 0 0 54 12)(font "Arial" ))
-		(text "theTA[6..0]" (rect 94 27 148 39)(font "Arial" ))
-		(line (pt 160 32)(pt 144 32)(line_width 3))
-	)
-	(drawing
-		(rectangle (rect 16 16 144 64))
 	)
 )
 (connector
@@ -148,11 +148,6 @@ applicable agreement for further details.
 (connector
 	(pt 272 296)
 	(pt 472 296)
-)
-(connector
-	(pt 536 184)
-	(pt 456 184)
-	(bus)
 )
 (connector
 	(pt 536 200)
@@ -200,5 +195,10 @@ applicable agreement for further details.
 (connector
 	(pt 904 144)
 	(pt 904 176)
+)
+(connector
+	(pt 456 184)
+	(pt 536 184)
+	(bus)
 )
 (junction (pt 272 184))

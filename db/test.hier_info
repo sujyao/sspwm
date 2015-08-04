@@ -1,11 +1,11 @@
 |test
-GPIO_0[0] <= sspwm:inst3.pwm
-CLOCK_50 => sspwm:inst3.clk
-CLOCK_50 => sine_look_up:inst.clk
-CLOCK_50 => theta:inst4.clk
+GPIO_0[0] <= sspwm:inst6.pwm
+CLOCK_50 => sspwm:inst6.clk
+CLOCK_50 => sine_look_up:inst5.clk
+CLOCK_50 => theta:inst.clk
 
 
-|test|sspwm:inst3
+|test|sspwm:inst6
 clk => counter[0].CLK
 clk => counter[1].CLK
 clk => counter[2].CLK
@@ -51,18 +51,18 @@ Sine_out[8] => LessThan0.IN56
 Sine_out[9] => LessThan0.IN55
 Sine_out[10] => LessThan0.IN54
 Sine_out[11] => LessThan0.IN53
-Sine_out[12] => LessThan0.IN52
 pwm <= pwm~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|test|sine_look_up:inst
-teth_ta[0] => Decoder0.IN6
-teth_ta[1] => Decoder0.IN5
-teth_ta[2] => Decoder0.IN4
-teth_ta[3] => Decoder0.IN3
-teth_ta[4] => Decoder0.IN2
-teth_ta[5] => Decoder0.IN1
-teth_ta[6] => Decoder0.IN0
+|test|sine_look_up:inst5
+teth_ta[0] => Ram0.RADDR
+teth_ta[1] => Ram0.RADDR1
+teth_ta[2] => Ram0.RADDR2
+teth_ta[3] => Ram0.RADDR3
+teth_ta[4] => Ram0.RADDR4
+teth_ta[5] => Ram0.RADDR5
+teth_ta[6] => Ram0.RADDR6
+teth_ta[7] => Ram0.RADDR7
 clk => sine_out[0]~reg0.CLK
 clk => sine_out[1]~reg0.CLK
 clk => sine_out[2]~reg0.CLK
@@ -75,7 +75,6 @@ clk => sine_out[8]~reg0.CLK
 clk => sine_out[9]~reg0.CLK
 clk => sine_out[10]~reg0.CLK
 clk => sine_out[11]~reg0.CLK
-clk => sine_out[12]~reg0.CLK
 sine_out[0] <= sine_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 sine_out[1] <= sine_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 sine_out[2] <= sine_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -88,74 +87,9 @@ sine_out[8] <= sine_out[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 sine_out[9] <= sine_out[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 sine_out[10] <= sine_out[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 sine_out[11] <= sine_out[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-sine_out[12] <= sine_out[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|test|theta:inst4
-clk => delay[0].CLK
-clk => delay[1].CLK
-clk => delay[2].CLK
-clk => delay[3].CLK
-clk => delay[4].CLK
-clk => delay[5].CLK
-clk => delay[6].CLK
-clk => delay[7].CLK
-clk => delay[8].CLK
-clk => delay[9].CLK
-clk => delay[10].CLK
-clk => delay[11].CLK
-clk => delay[12].CLK
-clk => delay[13].CLK
-clk => delay[14].CLK
-clk => delay[15].CLK
-clk => delay[16].CLK
-clk => delay[17].CLK
-clk => delay[18].CLK
-clk => delay[19].CLK
-clk => delay[20].CLK
-clk => delay[21].CLK
-clk => delay[22].CLK
-clk => delay[23].CLK
-clk => delay[24].CLK
-clk => delay[25].CLK
-clk => delay[26].CLK
-clk => delay[27].CLK
-clk => delay[28].CLK
-clk => delay[29].CLK
-clk => delay[30].CLK
-clk => delay[31].CLK
-clk => theTA_TMP_COUNTER[0].CLK
-clk => theTA_TMP_COUNTER[1].CLK
-clk => theTA_TMP_COUNTER[2].CLK
-clk => theTA_TMP_COUNTER[3].CLK
-clk => theTA_TMP_COUNTER[4].CLK
-clk => theTA_TMP_COUNTER[5].CLK
-clk => theTA_TMP_COUNTER[6].CLK
-clk => theTA_TMP_COUNTER[7].CLK
-clk => theTA_TMP_COUNTER[8].CLK
-clk => theTA_TMP_COUNTER[9].CLK
-clk => theTA_TMP_COUNTER[10].CLK
-clk => theTA_TMP_COUNTER[11].CLK
-clk => theTA_TMP_COUNTER[12].CLK
-clk => theTA_TMP_COUNTER[13].CLK
-clk => theTA_TMP_COUNTER[14].CLK
-clk => theTA_TMP_COUNTER[15].CLK
-clk => theTA_TMP_COUNTER[16].CLK
-clk => theTA_TMP_COUNTER[17].CLK
-clk => theTA_TMP_COUNTER[18].CLK
-clk => theTA_TMP_COUNTER[19].CLK
-clk => theTA_TMP_COUNTER[20].CLK
-clk => theTA_TMP_COUNTER[21].CLK
-clk => theTA_TMP_COUNTER[22].CLK
-clk => theTA_TMP_COUNTER[23].CLK
-clk => theTA_TMP_COUNTER[24].CLK
-clk => theTA_TMP_COUNTER[25].CLK
-clk => theTA_TMP_COUNTER[26].CLK
-clk => theTA_TMP_COUNTER[27].CLK
-clk => theTA_TMP_COUNTER[28].CLK
-clk => theTA_TMP_COUNTER[29].CLK
-clk => theTA_TMP_COUNTER[30].CLK
-clk => theTA_TMP_COUNTER[31].CLK
+|test|theta:inst
 clk => r[0].CLK
 clk => r[1].CLK
 clk => r[2].CLK
@@ -195,6 +129,7 @@ clk => theTA[3]~reg0.CLK
 clk => theTA[4]~reg0.CLK
 clk => theTA[5]~reg0.CLK
 clk => theTA[6]~reg0.CLK
+clk => theTA[7]~reg0.CLK
 theTA[0] <= theTA[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 theTA[1] <= theTA[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 theTA[2] <= theTA[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -202,5 +137,6 @@ theTA[3] <= theTA[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 theTA[4] <= theTA[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 theTA[5] <= theTA[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 theTA[6] <= theTA[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+theTA[7] <= theTA[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
