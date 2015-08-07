@@ -1,6 +1,5 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="test">
-		<CBX_INST_ENTRY INSTANCE_NAME="|test|sine_look_up:inst5|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_4971.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

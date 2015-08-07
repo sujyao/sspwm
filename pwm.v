@@ -48,7 +48,7 @@ always @(posedge clk) begin
 			counter = counter + 1;
 			pwm = pwm;
 		end
-		if(counter <= SINE_OUT) // duty cycle value 
+		if(counter <= 3897) // duty cycle value 
 			pwm = 1'b1;
 		else
 			pwm =1'b0;
