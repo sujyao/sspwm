@@ -129,6 +129,7 @@ clk => theTA[4]~reg0.CLK
 clk => theTA[5]~reg0.CLK
 clk => theTA[6]~reg0.CLK
 clk => theTA[7]~reg0.CLK
+clk => theTA[8]~reg0.CLK
 theTA[0] <= theTA[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 theTA[1] <= theTA[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 theTA[2] <= theTA[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -137,5 +138,6 @@ theTA[4] <= theTA[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 theTA[5] <= theTA[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 theTA[6] <= theTA[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 theTA[7] <= theTA[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+theTA[8] <= theTA[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

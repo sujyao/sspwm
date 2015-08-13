@@ -1,6 +1,6 @@
 module  theta(
 		input clk,
-		output  reg  [7:0] theTA);
+		output  reg  [8:0] theTA);
 		 
 
 	
@@ -14,7 +14,7 @@ module  theta(
 	
 	always @(posedge clk) begin
 		if(r == div ) begin
-			theTA <= (theTA + 8'b1) % 9'd256; // theta_a is flopped theat 0 to 255  
+			theTA <= (theTA + 9'b1) % 9'd256; // theta_a is flopped theat 0 to 255  
 			r <= 0;
 	
 		end
