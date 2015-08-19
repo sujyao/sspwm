@@ -1,11 +1,14 @@
 |test
-GPIO_0[0] <= sspwm:inst6.pwm
-CLOCK_50 => sspwm:inst6.clk
+GPIO_2_0 <= sspwm:inst10.pwm
+CLOCK_50 => sspwm:inst10.clk
 CLOCK_50 => theta:inst.clk
+CLOCK_50 => sspwm:inst11.clk
+GPIO_2_10 <= sspwm:inst11.pwm
+GPIO_2_2 <= <VCC>
+GPIO_2_12 <= <VCC>
 
 
-|test|sspwm:inst6
-clk => pwm~reg0.CLK
+|test|sspwm:inst10
 clk => counter[0].CLK
 clk => counter[1].CLK
 clk => counter[2].CLK
@@ -38,34 +41,23 @@ clk => counter[28].CLK
 clk => counter[29].CLK
 clk => counter[30].CLK
 clk => counter[31].CLK
-Sine_out[0] => Equal1.IN31
-Sine_out[0] => Equal2.IN31
-Sine_out[1] => Equal1.IN30
-Sine_out[1] => Equal2.IN30
-Sine_out[2] => Equal1.IN29
-Sine_out[2] => Equal2.IN29
-Sine_out[3] => Equal1.IN28
-Sine_out[3] => Equal2.IN28
-Sine_out[4] => Equal1.IN27
-Sine_out[4] => Equal2.IN27
-Sine_out[5] => Equal1.IN26
-Sine_out[5] => Equal2.IN26
-Sine_out[6] => Equal1.IN25
-Sine_out[6] => Equal2.IN25
-Sine_out[7] => Equal1.IN24
-Sine_out[7] => Equal2.IN24
-Sine_out[8] => Equal1.IN23
-Sine_out[8] => Equal2.IN23
-Sine_out[9] => Equal1.IN22
-Sine_out[9] => Equal2.IN22
-Sine_out[10] => Equal1.IN21
-Sine_out[10] => Equal2.IN21
-Sine_out[11] => Equal1.IN20
-Sine_out[11] => Equal2.IN20
+clk => pwm~reg0.CLK
+Sine_out[0] => LessThan0.IN64
+Sine_out[1] => LessThan0.IN63
+Sine_out[2] => LessThan0.IN62
+Sine_out[3] => LessThan0.IN61
+Sine_out[4] => LessThan0.IN60
+Sine_out[5] => LessThan0.IN59
+Sine_out[6] => LessThan0.IN58
+Sine_out[7] => LessThan0.IN57
+Sine_out[8] => LessThan0.IN56
+Sine_out[9] => LessThan0.IN55
+Sine_out[10] => LessThan0.IN54
+Sine_out[11] => LessThan0.IN53
 pwm <= pwm~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|test|sine_look_up:inst2
+|test|sine_look_up:inst8
 teth_ta[0] => Ram0.RADDR
 teth_ta[1] => Ram0.RADDR1
 teth_ta[2] => Ram0.RADDR2
@@ -139,5 +131,77 @@ theTA[5] <= theTA[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 theTA[6] <= theTA[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 theTA[7] <= theTA[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 theTA[8] <= theTA[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|test|sspwm:inst11
+clk => counter[0].CLK
+clk => counter[1].CLK
+clk => counter[2].CLK
+clk => counter[3].CLK
+clk => counter[4].CLK
+clk => counter[5].CLK
+clk => counter[6].CLK
+clk => counter[7].CLK
+clk => counter[8].CLK
+clk => counter[9].CLK
+clk => counter[10].CLK
+clk => counter[11].CLK
+clk => counter[12].CLK
+clk => counter[13].CLK
+clk => counter[14].CLK
+clk => counter[15].CLK
+clk => counter[16].CLK
+clk => counter[17].CLK
+clk => counter[18].CLK
+clk => counter[19].CLK
+clk => counter[20].CLK
+clk => counter[21].CLK
+clk => counter[22].CLK
+clk => counter[23].CLK
+clk => counter[24].CLK
+clk => counter[25].CLK
+clk => counter[26].CLK
+clk => counter[27].CLK
+clk => counter[28].CLK
+clk => counter[29].CLK
+clk => counter[30].CLK
+clk => counter[31].CLK
+clk => pwm~reg0.CLK
+Sine_out[0] => LessThan0.IN64
+Sine_out[1] => LessThan0.IN63
+Sine_out[2] => LessThan0.IN62
+Sine_out[3] => LessThan0.IN61
+Sine_out[4] => LessThan0.IN60
+Sine_out[5] => LessThan0.IN59
+Sine_out[6] => LessThan0.IN58
+Sine_out[7] => LessThan0.IN57
+Sine_out[8] => LessThan0.IN56
+Sine_out[9] => LessThan0.IN55
+Sine_out[10] => LessThan0.IN54
+Sine_out[11] => LessThan0.IN53
+pwm <= pwm~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|test|sine_look_up2:inst9
+teth_ta[0] => Ram0.RADDR
+teth_ta[1] => Ram0.RADDR1
+teth_ta[2] => Ram0.RADDR2
+teth_ta[3] => Ram0.RADDR3
+teth_ta[4] => Ram0.RADDR4
+teth_ta[5] => Ram0.RADDR5
+teth_ta[6] => Ram0.RADDR6
+teth_ta[7] => Ram0.RADDR7
+sine_out[0] <= Ram0.DATAOUT
+sine_out[1] <= Ram0.DATAOUT1
+sine_out[2] <= Ram0.DATAOUT2
+sine_out[3] <= Ram0.DATAOUT3
+sine_out[4] <= Ram0.DATAOUT4
+sine_out[5] <= Ram0.DATAOUT5
+sine_out[6] <= Ram0.DATAOUT6
+sine_out[7] <= Ram0.DATAOUT7
+sine_out[8] <= Ram0.DATAOUT8
+sine_out[9] <= Ram0.DATAOUT9
+sine_out[10] <= Ram0.DATAOUT10
+sine_out[11] <= Ram0.DATAOUT11
 
 
