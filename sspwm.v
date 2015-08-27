@@ -1,6 +1,6 @@
 module  sspwm(
 		input clk,
-		input [11:0] Sine_out,
+		input [10:0] Sine_out,
 		output reg pwm);
 		 
 
@@ -14,7 +14,7 @@ always @(posedge clk) begin
  
 	// pwm generator  
 	pwm = 1'b1;
-	if(counter == 3906) begin // Top value, set to setup pwm fre.
+	if(counter == 2000) begin // Top value, set to setup pwm fre.25kHz
 		counter = 0;
 		pwm = 1'b1; 
 	end

@@ -1,0 +1,57 @@
+module  sine_look_up2_10s(
+		input  [7:0] teth_ta,
+		//input  clk,
+		output reg [11:0] sine_out);
+		 
+always @(teth_ta) begin      // sine look up table 
+	case (teth_ta)                    			
+		8'd0	:	sine_out	 =	12'd	0	;
+		8'd1	:	sine_out	 =	12'd	580	;
+		8'd2	:	sine_out	 =	12'd	1147	;
+		8'd3	:	sine_out	 =	12'd	1685	;
+		8'd4	:	sine_out	 =	12'd	2181	;
+		8'd5	:	sine_out	 =	12'd	2624	;
+		8'd6	:	sine_out	 =	12'd	3002	;
+		8'd7	:	sine_out	 =	12'd	3306	;
+		8'd8	:	sine_out	 =	12'd	3529	;
+		8'd9	:	sine_out	 =	12'd	3665	;
+		8'd10	:	sine_out	 =	12'd	3711	;
+		8'd11	:	sine_out	 =	12'd	3665	;
+		8'd12	:	sine_out	 =	12'd	3529	;
+		8'd13	:	sine_out	 =	12'd	3306	;
+		8'd14	:	sine_out	 =	12'd	3002	;
+		8'd15	:	sine_out	 =	12'd	2624	;
+		8'd16	:	sine_out	 =	12'd	2181	;
+		8'd17	:	sine_out	 =	12'd	1685	;
+		8'd18	:	sine_out	 =	12'd	1147	;
+		8'd19	:	sine_out	 =	12'd	580	;
+		8'd20	:	sine_out	 =	12'd	0	;
+		8'd21	:	sine_out	 =	12'd	0	;
+		8'd22	:	sine_out	 =	12'd	0	;
+		8'd23	:	sine_out	 =	12'd	0	;
+		8'd24	:	sine_out	 =	12'd	0	;
+		8'd25	:	sine_out	 =	12'd	0	;
+		8'd26	:	sine_out	 =	12'd	0	;
+		8'd27	:	sine_out	 =	12'd	0	;
+		8'd28	:	sine_out	 =	12'd	0	;
+		8'd29	:	sine_out	 =	12'd	0	;
+		8'd30	:	sine_out	 =	12'd	0	;
+		8'd31	:	sine_out	 =	12'd	0	;
+		8'd32	:	sine_out	 =	12'd	0	;
+		8'd33	:	sine_out	 =	12'd	0	;
+		8'd34	:	sine_out	 =	12'd	0	;
+		8'd35	:	sine_out	 =	12'd	0	;
+		8'd36	:	sine_out	 =	12'd	0	;
+		8'd37	:	sine_out	 =	12'd	0	;
+		8'd38	:	sine_out	 =	12'd	0	;
+		8'd39	:	sine_out	 =	12'd	0	;
+		8'd40	:	sine_out	 =	12'd	0	;
+
+
+
+		default: sine_out = 12'd0;
+		
+	endcase
+	
+end
+endmodule
